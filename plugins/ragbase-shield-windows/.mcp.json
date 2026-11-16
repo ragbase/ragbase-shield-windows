@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "ragbase-shield": {
+      "command": "${CLAUDE_PLUGIN_ROOT}/engine/shield.exe",
+      "args": [
+        "-I",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "shield_boot"
+      ]
+    }
+  }
+}

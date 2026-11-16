@@ -1,0 +1,40 @@
+{
+  "name": "ragbase-shield-windows",
+  "owner": {
+    "name": "RAGbase",
+    "url": "https://ragbase.ai"
+  },
+  "metadata": {
+    "description": "RAGbase Shield pour l'application Claude, version PC Windows.",
+    "version": "0.4.2"
+  },
+  "plugins": [
+    {
+      "name": "ragbase-shield-windows",
+      "source": "./plugins/ragbase-shield-windows",
+      "description": "Pour les avocats : Claude travaille sur vos dossiers clients sans voir les vrais noms. Ils restent sur votre PC Windows et reviennent dans le document final.",
+      "version": "0.4.2",
+      "author": {
+        "name": "RAGbase"
+      },
+      "homepage": "https://shield.ragbase.ai",
+      "repository": "https://github.com/ragbase/ragbase-shield",
+      "license": "Apache-2.0",
+      "keywords": [
+        "avocat",
+        "secret professionnel",
+        "confidentialité",
+        "rgpd",
+        "dossier client",
+        "juridique",
+        "pseudonymisation"
+      ],
+      "category": "security",
+      "tags": [
+        "avocat",
+        "confidentialité",
+        "juridique"
+      ]
+    }
+  ]
+}

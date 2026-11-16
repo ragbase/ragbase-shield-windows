@@ -1,0 +1,59 @@
+RAGbase Shield
+Copyright 2026 RAGbase
+
+This product includes software developed by RAGbase (https://ragbase.ai).
+
+-------------------------------------------------------------------------------
+Third-party data shipped with RAGbase Shield
+-------------------------------------------------------------------------------
+
+src/ragbase_shield/engine/lexicon/first_names_fr.txt
+  Derived from: INSEE, "Fichier des prénoms", édition 2025 (births in France
+  1900-2025), national file, https://www.insee.fr/fr/statistiques/8595130
+  Licence: Licence Ouverte / Open Licence 2.0 (Etalab),
+  https://www.etalab.gouv.fr/licence-ouverte-open-licence/
+  Changes made by RAGbase: names folded (lower case, accents removed), totals
+  summed over sexes and years, names with fewer than 150 births or fewer than
+  3 letters removed, birth counts dropped. Rebuilt with
+  bench/tools/build_first_names.py.
+  Source: INSEE, Fichier des prénoms, édition 2025.
+
+src/ragbase_shield/engine/lexicon/en_first_names.txt
+  Derived from: US Census Bureau, "Frequently Occurring First Names and
+  Surnames From the 1990 Census" (dist.female.first, dist.male.first),
+  https://www2.census.gov/topics/genealogy/1990surnames/
+  Licence: US government work, public domain.
+  Changes made by RAGbase: names folded, a sex column added (F/M/U from the
+  two files), short and rare names removed, a hand-written supplement of
+  modern and international first names and of nickname pairs added, a few
+  entries removed by the evaluation audit. The header of the file documents
+  the derivation.
+
+Every other lexicon file under src/ragbase_shield/engine/lexicon/ (stop
+words, vocabulary, places, acronyms, legal forms, legal terms, whitelists,
+NER stop lists, synthetic name, street and town lists) was written for
+RAGbase Shield.
+
+-------------------------------------------------------------------------------
+Design references (ideas only; no code or data copied)
+-------------------------------------------------------------------------------
+
+RAGbase Shield was written from scratch. These open-source projects informed
+its design. We thank their authors.
+
+  PII Shield (MIT), https://github.com/gregmos/PII-Shield
+    Tools read files on disk and give the model only masked text; a session id
+    stored in the output document allows restore weeks later.
+  PrivAiTe (BSD-3-Clause), https://github.com/crp4222/PrivAiTe
+    A "verify" command that plants test data and reports LEAK or CLEAN.
+  pii-mcp (MIT), https://github.com/foro-sh/pii-mcp
+    Fail closed: on error, never fall back to the raw text.
+
+-------------------------------------------------------------------------------
+Bundled in this plugin
+-------------------------------------------------------------------------------
+
+This plugin folder bundles RAGbase Shield 0.4.2 (engine source: github.com/ragbase/ragbase-shield,
+branch plugin-claude-tab, commit 5cebe92a0e18aba6d5bddc5ea1bebdf0e28ac9da), the runtime Python 3.14.10 for Windows 64-bit (python.org embeddable package)
+and the Python packages it needs (in engine/pkgs.zip). Each bundled component keeps its own licence. The list, the
+sources and the full licence texts are in THIRD_PARTY_LICENSES. No GPL, LGPL or AGPL code is shipped.

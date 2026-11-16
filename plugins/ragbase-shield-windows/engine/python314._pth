@@ -1,0 +1,6 @@
+python314.zip
+.
+
+# Shield: the packages are unpacked from pkgs.zip by shield_boot into a short folder
+# (Windows path limit) and added with site.addsitedir. Isolated mode stays on (._pth).
+import site

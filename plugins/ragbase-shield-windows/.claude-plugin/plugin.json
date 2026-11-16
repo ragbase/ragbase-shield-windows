@@ -1,0 +1,22 @@
+{
+  "name": "ragbase-shield-windows",
+  "displayName": "RAGbase Shield (Windows)",
+  "version": "0.4.2",
+  "description": "Pour les avocats : Claude travaille sur vos dossiers clients sans voir les vrais noms. Ils restent sur votre PC Windows et reviennent dans le document final.",
+  "author": {
+    "name": "RAGbase",
+    "url": "https://ragbase.ai"
+  },
+  "homepage": "https://shield.ragbase.ai",
+  "repository": "https://github.com/ragbase/ragbase-shield",
+  "license": "Apache-2.0",
+  "keywords": [
+    "avocat",
+    "secret professionnel",
+    "confidentialité",
+    "rgpd",
+    "dossier client",
+    "juridique",
+    "pseudonymisation"
+  ]
+}
