@@ -6,14 +6,14 @@
   },
   "metadata": {
     "description": "RAGbase Shield pour l'application Claude, version PC Windows.",
-    "version": "0.4.2"
+    "version": "0.4.3"
   },
   "plugins": [
     {
       "name": "ragbase-shield-windows",
       "source": "./plugins/ragbase-shield-windows",
       "description": "Pour les avocats : Claude travaille sur vos dossiers clients sans voir les vrais noms. Ils restent sur votre PC Windows et reviennent dans le document final.",
-      "version": "0.4.2",
+      "version": "0.4.3",
       "author": {
         "name": "RAGbase"
       },

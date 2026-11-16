@@ -2,11 +2,12 @@
 
 The Claude app copies the plugin into a deep folder (about 180 to 230 characters before ``engine\\``), and Windows,
 by default, cannot open a file whose full path has 260 characters or more. So the plugin ships its Python packages
-in ONE archive, ``engine\\pkgs.zip``, and this module unpacks it once into a short folder of the computer:
+in ONE archive, ``engine\\pkgs.bin`` (a zip archive; its name does not end in ".zip" because the Claude app may
+refuse a plugin that holds a file named "*.zip"), and this module unpacks it once into a short folder of the computer:
 
     <Local AppData>\\RAGbase Shield\\engine\\<version>-<id>
 
-``<id>`` is the first 12 hex characters of the SHA-256 of ``pkgs.zip``, computed at build time and stored in
+``<id>`` is the first 12 hex characters of the SHA-256 of ``pkgs.bin``, computed at build time and stored in
 ``engine\\pkgs.id`` (the archive is never hashed at start). The plugin command is
 
     ${CLAUDE_PLUGIN_ROOT}/engine/shield.exe -I -B -X utf8 -m shield_boot
@@ -26,9 +27,9 @@ start builds it again. The vault (names and codes) is NOT here: see ``ragbase_sh
 import os
 import sys
 
-VERSION = "0.4.2"
+VERSION = "0.4.3"
 APP_DIR_NAME = "RAGbase Shield"
-ARCHIVE = "pkgs.zip"
+ARCHIVE = "pkgs.bin"  # a zip archive, under a name that the Claude app accepts
 ID_FILE = "pkgs.id"
 MARKER = "complete.txt"
 MODULE = "ragbase_shield.claude_tab"
@@ -107,7 +108,7 @@ def local_app_data() -> str:
 
 
 def engine_dir() -> str:
-    """The plugin's ``engine`` folder: where this module, ``pkgs.zip`` and ``pkgs.id`` are."""
+    """The plugin's ``engine`` folder: where this module, ``pkgs.bin`` and ``pkgs.id`` are."""
     return os.path.dirname(os.path.abspath(__file__))
 
 

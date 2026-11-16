@@ -1,7 +1,7 @@
 {
   "name": "ragbase-shield-windows",
   "displayName": "RAGbase Shield (Windows)",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "Pour les avocats : Claude travaille sur vos dossiers clients sans voir les vrais noms. Ils restent sur votre PC Windows et reviennent dans le document final.",
   "author": {
     "name": "RAGbase",

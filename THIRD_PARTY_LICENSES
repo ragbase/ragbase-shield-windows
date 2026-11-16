@@ -1,11 +1,11 @@
-THIRD-PARTY LICENCES: RAGbase Shield plugin for Claude (Windows), version 0.4.2
+THIRD-PARTY LICENCES: RAGbase Shield plugin for Claude (Windows), version 0.4.3
 
 RAGbase Shield itself is under the Apache License 2.0 (files LICENSE and NOTICE).
 This plugin also bundles a Python runtime and the Python packages below. Each one keeps its own licence.
 Part 1 lists every bundled component with its version, licence and source. Part 2 holds the full
 licence texts: the runtime texts, then the licence files that each package ships in its wheel
 (copied without change from the .dist-info folder, which also stays in the plugin, inside
-engine/pkgs.zip).
+engine/pkgs.bin).
 No GPL, LGPL or AGPL code is shipped.
 pywin32 lists the licence of its module adodbapi (LGPL-2.1) in its licence files; that module is
 removed from this plugin and is not shipped.
@@ -16,7 +16,7 @@ PART 1. COMPONENTS
 
 Runtime: Python 3.14.10 for Windows 64-bit (embeddable package)
   Source: python.org, python-3.14.10-embed-amd64.zip, https://www.python.org/ftp/python/3.14.10/python-3.14.10-embed-amd64.zip (SHA-256 90905e64a840557d8c1bc4f5b74db3d7ee85e3ffb217611cac1c7813acea4159). pythonw.exe is shipped under the name engine/shield.exe.
-  In the plugin: engine/ (shield.exe, python314.dll, python314.zip, *.pyd, *.dll)
+  In the plugin: engine/ (shield.exe, python314.dll, python314.bin (standard library, a zip archive), *.pyd, *.dll)
   Parts of the runtime:
     - CPython 3.14.10: PSF-2.0 (https://www.python.org/downloads/release/python-31410/)
     - OpenSSL 3 (libcrypto-3.dll, libssl-3.dll): Apache-2.0 (https://www.openssl.org/)
@@ -30,207 +30,207 @@ Python packages (41), from pypi.org wheels, each checked against the SHA-256 of 
   annotated-types 0.8.0
     Licence: MIT
     Wheel: annotated_types-0.8.0-py3-none-any.whl (sha256 f072f4d804ea359e4eaf198b1af7a8b0943881a87f31bb764f8bf219bb9419e0)
-    Licence files (inside engine/pkgs.zip): annotated_types-0.8.0.dist-info/
+    Licence files (inside engine/pkgs.bin): annotated_types-0.8.0.dist-info/
 
   anyio 4.15.1
     Licence: MIT
     Wheel: anyio-4.15.1-py3-none-any.whl (sha256 6152fdbbf9a77fdec97731721bebf7c4c44f7c29b424b0065826173efc7ed101)
-    Licence files (inside engine/pkgs.zip): anyio-4.15.1.dist-info/
+    Licence files (inside engine/pkgs.bin): anyio-4.15.1.dist-info/
 
   attrs 26.1.0
     Licence: MIT
     Wheel: attrs-26.1.0-py3-none-any.whl (sha256 c647aa4a12dfbad9333ca4e71fe62ddc36f4e63b2d260a37a8b83d2f043ac309)
-    Licence files (inside engine/pkgs.zip): attrs-26.1.0.dist-info/
+    Licence files (inside engine/pkgs.bin): attrs-26.1.0.dist-info/
 
   cffi 2.1.1
     Licence: MIT-0
     Wheel: cffi-2.1.1-cp314-cp314-win_amd64.whl (sha256 3222ba5d678f80a030e6afbcc33dc1ae5cb45facabb61cee2c7016b8432fde48)
-    Licence files (inside engine/pkgs.zip): cffi-2.1.1.dist-info/
+    Licence files (inside engine/pkgs.bin): cffi-2.1.1.dist-info/
 
   charset-normalizer 3.5.2
     Licence: MIT
     Wheel: charset_normalizer-3.5.2-cp314-cp314-win_amd64.whl (sha256 e4e81e09c1578b8df602e3db08b0b3ea0a6947ad612f52bf8dc5ea8d47691f0c)
-    Licence files (inside engine/pkgs.zip): charset_normalizer-3.5.2.dist-info/
+    Licence files (inside engine/pkgs.bin): charset_normalizer-3.5.2.dist-info/
 
   click 8.5.0
     Licence: BSD-3-Clause
     Wheel: click-8.5.0-py3-none-any.whl (sha256 255bc9599cf7748b4b1a446ccc735421bd08a2ae529a8b88597d3de5664ee360)
-    Licence files (inside engine/pkgs.zip): click-8.5.0.dist-info/
+    Licence files (inside engine/pkgs.bin): click-8.5.0.dist-info/
 
   cryptography 50.0.2
     Licence: Apache-2.0 OR BSD-3-Clause
     Wheel: cryptography-50.0.2-cp311-abi3-win_amd64.whl (sha256 7afa5a6602a9f29af1f3a2965f831bae7c9d5d597b7cbb716d41ab3b7d89879c)
-    Licence files (inside engine/pkgs.zip): cryptography-50.0.2.dist-info/
+    Licence files (inside engine/pkgs.bin): cryptography-50.0.2.dist-info/
 
   h11 0.16.0
     Licence: MIT
     Wheel: h11-0.16.0-py3-none-any.whl (sha256 63cf8bbe7522de3bf65932fda1d9c2772064ffb3dae62d55932da54b31cb6c86)
-    Licence files (inside engine/pkgs.zip): h11-0.16.0.dist-info/
+    Licence files (inside engine/pkgs.bin): h11-0.16.0.dist-info/
 
   httpcore2 2.16.0
     Licence: BSD-3-Clause
     Wheel: httpcore2-2.16.0-py3-none-any.whl (sha256 5c4358319f2602d984ad93182c9fee5160f22e9da7babdda870a5e7c4e2dc34f)
-    Licence files (inside engine/pkgs.zip): httpcore2-2.16.0.dist-info/
+    Licence files (inside engine/pkgs.bin): httpcore2-2.16.0.dist-info/
 
   httpx2 2.16.0
     Licence: BSD-3-Clause
     Wheel: httpx2-2.16.0-py3-none-any.whl (sha256 fd2c5d7909e8d86fe92d53020c310ca0e4e431b838c207c5754b9bbf0308d49a)
-    Licence files (inside engine/pkgs.zip): httpx2-2.16.0.dist-info/
+    Licence files (inside engine/pkgs.bin): httpx2-2.16.0.dist-info/
 
   idna 3.20
     Licence: BSD-3-Clause
     Wheel: idna-3.20-py3-none-any.whl (sha256 ab7ae7122974553370f0bdb919e1a960b2cd1bc1ef0276416d896db81c14582c)
-    Licence files (inside engine/pkgs.zip): idna-3.20.dist-info/
+    Licence files (inside engine/pkgs.bin): idna-3.20.dist-info/
 
   jaraco.classes 3.4.0
     Licence: MIT License
     Wheel: jaraco.classes-3.4.0-py3-none-any.whl (sha256 f662826b6bed8cace05e7ff873ce0f9283b5c924470fe664fff1c2f00f581790)
-    Licence files (inside engine/pkgs.zip): jaraco.classes-3.4.0.dist-info/
+    Licence files (inside engine/pkgs.bin): jaraco.classes-3.4.0.dist-info/
 
   jaraco.context 6.1.2
     Licence: MIT
     Wheel: jaraco_context-6.1.2-py3-none-any.whl (sha256 bf8150b79a2d5d91ae48629d8b427a8f7ba0e1097dd6202a9059f29a36379535)
-    Licence files (inside engine/pkgs.zip): jaraco_context-6.1.2.dist-info/
+    Licence files (inside engine/pkgs.bin): jaraco_context-6.1.2.dist-info/
 
   jaraco.functools 4.6.0
     Licence: MIT
     Wheel: jaraco_functools-4.6.0-py3-none-any.whl (sha256 99e3dc0060c5cbe8fcd1cdb36258e2a65ca40f1566b2033b12abb1bb44dd3c30)
-    Licence files (inside engine/pkgs.zip): jaraco_functools-4.6.0.dist-info/
+    Licence files (inside engine/pkgs.bin): jaraco_functools-4.6.0.dist-info/
 
   jsonschema 4.26.0
     Licence: MIT
     Wheel: jsonschema-4.26.0-py3-none-any.whl (sha256 d489f15263b8d200f8387e64b4c3a75f06629559fb73deb8fdfb525f2dab50ce)
-    Licence files (inside engine/pkgs.zip): jsonschema-4.26.0.dist-info/
+    Licence files (inside engine/pkgs.bin): jsonschema-4.26.0.dist-info/
 
   jsonschema-specifications 2025.9.1
     Licence: MIT
     Wheel: jsonschema_specifications-2025.9.1-py3-none-any.whl (sha256 98802fee3a11ee76ecaca44429fda8a41bff98b00a0f2838151b113f210cc6fe)
-    Licence files (inside engine/pkgs.zip): jsonschema_specifications-2025.9.1.dist-info/
+    Licence files (inside engine/pkgs.bin): jsonschema_specifications-2025.9.1.dist-info/
 
   keyring 25.7.0
     Licence: MIT
     Wheel: keyring-25.7.0-py3-none-any.whl (sha256 be4a0b195f149690c166e850609a477c532ddbfbaed96a404d4e43f8d5e2689f)
-    Licence files (inside engine/pkgs.zip): keyring-25.7.0.dist-info/
+    Licence files (inside engine/pkgs.bin): keyring-25.7.0.dist-info/
 
   lxml 6.1.3
     Licence: BSD-3-Clause
     Wheel: lxml-6.1.3-cp314-cp314-win_amd64.whl (sha256 66299564c046bc7e0cc5de5106601eae907e9fa5904cd68a323380a8502f7861)
-    Licence files (inside engine/pkgs.zip): lxml-6.1.3.dist-info/
+    Licence files (inside engine/pkgs.bin): lxml-6.1.3.dist-info/
 
   mcp 2.3.0
     Licence: MIT
     Wheel: mcp-2.3.0-py3-none-any.whl (sha256 dd0c44c089d16453e8ae31a3877a0054d7a2314caaa81f5e0541b9b1734b2377)
-    Licence files (inside engine/pkgs.zip): mcp-2.3.0.dist-info/
+    Licence files (inside engine/pkgs.bin): mcp-2.3.0.dist-info/
 
   mcp-types 2.3.0
     Licence: MIT
     Wheel: mcp_types-2.3.0-py3-none-any.whl (sha256 968efdbdaedfab06adae40d378a34395f1090c5921d4be3c9cde283aaf76d91d)
-    Licence files (inside engine/pkgs.zip): mcp_types-2.3.0.dist-info/
+    Licence files (inside engine/pkgs.bin): mcp_types-2.3.0.dist-info/
 
   more-itertools 11.2.1
     Licence: MIT
     Wheel: more_itertools-11.2.1-py3-none-any.whl (sha256 35a7377edd1dd6608dcb2cdf534ded55ea32d49448875ad042cd3f879fb1ded0)
-    Licence files (inside engine/pkgs.zip): more_itertools-11.2.1.dist-info/
+    Licence files (inside engine/pkgs.bin): more_itertools-11.2.1.dist-info/
 
   opentelemetry-api 1.45.1
     Licence: Apache-2.0
     Wheel: opentelemetry_api-1.45.1-py3-none-any.whl (sha256 b31553efa588ae44bc306f863c785c5333a9ecc091248c6ee68b4b6c87fdedfb)
-    Licence files (inside engine/pkgs.zip): opentelemetry_api-1.45.1.dist-info/
+    Licence files (inside engine/pkgs.bin): opentelemetry_api-1.45.1.dist-info/
 
   pdfminer.six 20260107
     Licence: MIT
     Wheel: pdfminer_six-20260107-py3-none-any.whl (sha256 366585ba97e80dffa8f00cebe303d2f381884d8637af4ce422f1df3ef38111a9)
-    Licence files (inside engine/pkgs.zip): pdfminer_six-20260107.dist-info/
+    Licence files (inside engine/pkgs.bin): pdfminer_six-20260107.dist-info/
 
   pdfplumber 0.11.10
     Licence: MIT License
     Wheel: pdfplumber-0.11.10-py3-none-any.whl (sha256 7741ea81bf165b474b153e6789d10d18e06b6ddcf3ec84289c3ef2fed6802580)
-    Licence files (inside engine/pkgs.zip): pdfplumber-0.11.10.dist-info/
+    Licence files (inside engine/pkgs.bin): pdfplumber-0.11.10.dist-info/
 
   pycparser 3.12
     Licence: BSD-3-Clause
     Wheel: pycparser-3.12-py3-none-any.whl (sha256 a076f3f489b39b43ed13563a1dafe42447445bec2e294154ec5c57fcdda4c85e)
-    Licence files (inside engine/pkgs.zip): pycparser-3.12.dist-info/
+    Licence files (inside engine/pkgs.bin): pycparser-3.12.dist-info/
 
   pydantic 2.14.1
     Licence: MIT
     Wheel: pydantic-2.14.1-py3-none-any.whl (sha256 9195d967ec791692a04438115466764fb8b9a27b31f14a760437694f40d6b454)
-    Licence files (inside engine/pkgs.zip): pydantic-2.14.1.dist-info/
+    Licence files (inside engine/pkgs.bin): pydantic-2.14.1.dist-info/
 
   pydantic_core 2.50.1
     Licence: MIT
     Wheel: pydantic_core-2.50.1-cp314-cp314-win_amd64.whl (sha256 d32f3acc081cc3923386d88f422cde8892335e95f034e0104bb4cf9310d9915f)
-    Licence files (inside engine/pkgs.zip): pydantic_core-2.50.1.dist-info/
+    Licence files (inside engine/pkgs.bin): pydantic_core-2.50.1.dist-info/
 
   PyJWT 2.15.1
     Licence: MIT
     Wheel: pyjwt-2.15.1-py3-none-any.whl (sha256 42d59d631f7768a1028a64c7ff581a9bf7519804daf91fc5b6c56e30eec5e193)
-    Licence files (inside engine/pkgs.zip): pyjwt-2.15.1.dist-info/
+    Licence files (inside engine/pkgs.bin): pyjwt-2.15.1.dist-info/
 
   pypdf 6.21.2
     Licence: BSD-3-Clause
     Wheel: pypdf-6.21.2-py3-none-any.whl (sha256 1d44d1a3a200f25062adff0085b02040e4646431ac2ccac22e42679e91466084)
-    Licence files (inside engine/pkgs.zip): pypdf-6.21.2.dist-info/
+    Licence files (inside engine/pkgs.bin): pypdf-6.21.2.dist-info/
 
   python-docx 1.2.0
     Licence: MIT
     Wheel: python_docx-1.2.0-py3-none-any.whl (sha256 3fd478f3250fbbbfd3b94fe1e985955737c145627498896a8a6bf81f4baf66c7)
-    Licence files (inside engine/pkgs.zip): python_docx-1.2.0.dist-info/
+    Licence files (inside engine/pkgs.bin): python_docx-1.2.0.dist-info/
 
   python-multipart 0.0.32
     Licence: Apache-2.0
     Wheel: python_multipart-0.0.32-py3-none-any.whl (sha256 ff6d3f776f16878c894e52e107296ffc890e913c611b1a4ec6c44e2821fe2e23)
-    Licence files (inside engine/pkgs.zip): python_multipart-0.0.32.dist-info/
+    Licence files (inside engine/pkgs.bin): python_multipart-0.0.32.dist-info/
 
   pywin32 312
     Licence: PSF
     Wheel: pywin32-312-cp314-cp314-win_amd64.whl (sha256 a4dd3a848290ef724347b19f301045831d8e802fa4464f491b98b1e0a081432e)
-    Licence files (inside engine/pkgs.zip): pywin32-312.dist-info/
+    Licence files (inside engine/pkgs.bin): pywin32-312.dist-info/
 
   pywin32-ctypes 0.2.3
     Licence: BSD-3-Clause
     Wheel: pywin32_ctypes-0.2.3-py3-none-any.whl (sha256 8a1513379d709975552d202d942d9837758905c8d01eb82b8bcc30918929e7b8)
-    Licence files (inside engine/pkgs.zip): pywin32_ctypes-0.2.3.dist-info/
+    Licence files (inside engine/pkgs.bin): pywin32_ctypes-0.2.3.dist-info/
 
   referencing 0.37.0
     Licence: MIT
     Wheel: referencing-0.37.0-py3-none-any.whl (sha256 381329a9f99628c9069361716891d34ad94af76e461dcb0335825aecc7692231)
-    Licence files (inside engine/pkgs.zip): referencing-0.37.0.dist-info/
+    Licence files (inside engine/pkgs.bin): referencing-0.37.0.dist-info/
 
   rpds-py 2026.9.1
     Licence: MIT
     Wheel: rpds_py-2026.9.1-cp314-cp314-win_amd64.whl (sha256 837c6b305e26fe0f75b15c92cf3b2ba29e0ae19dc40b1c557b026cb426347d0c)
-    Licence files (inside engine/pkgs.zip): rpds_py-2026.9.1.dist-info/
+    Licence files (inside engine/pkgs.bin): rpds_py-2026.9.1.dist-info/
 
   sse-starlette 3.6.0
     Licence: BSD-3-Clause
     Wheel: sse_starlette-3.6.0-py3-none-any.whl (sha256 e4dfa4d237d2712cb2b4d4918eda9b457cd6b44bbecdc838af75de836565bafd)
-    Licence files (inside engine/pkgs.zip): sse_starlette-3.6.0.dist-info/
+    Licence files (inside engine/pkgs.bin): sse_starlette-3.6.0.dist-info/
 
   starlette 1.10.0
     Licence: BSD-3-Clause
     Wheel: starlette-1.10.0-py3-none-any.whl (sha256 478c0ab3b4ced6e82719849c118fa406f0278a3499c1a898cd15cd31bdc38ce4)
-    Licence files (inside engine/pkgs.zip): starlette-1.10.0.dist-info/
+    Licence files (inside engine/pkgs.bin): starlette-1.10.0.dist-info/
 
   truststore 0.10.5
     Licence: MIT
     Wheel: truststore-0.10.5-py3-none-any.whl (sha256 9aaaedaefaf06d8b206278cf8b5012bc897f485a874503501e12d776df78951c)
-    Licence files (inside engine/pkgs.zip): truststore-0.10.5.dist-info/
+    Licence files (inside engine/pkgs.bin): truststore-0.10.5.dist-info/
 
   typing_extensions 4.16.0
     Licence: PSF-2.0
     Wheel: typing_extensions-4.16.0-py3-none-any.whl (sha256 481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8)
-    Licence files (inside engine/pkgs.zip): typing_extensions-4.16.0.dist-info/
+    Licence files (inside engine/pkgs.bin): typing_extensions-4.16.0.dist-info/
 
   typing-inspection 0.4.4
     Licence: MIT
     Wheel: typing_inspection-0.4.4-py3-none-any.whl (sha256 65b8397ba37ccbce054456aaccddfc91e6e3083c92824df348d96ca832f3f147)
-    Licence files (inside engine/pkgs.zip): typing_inspection-0.4.4.dist-info/
+    Licence files (inside engine/pkgs.bin): typing_inspection-0.4.4.dist-info/
 
   uvicorn 0.54.0
     Licence: BSD-3-Clause
     Wheel: uvicorn-0.54.0-py3-none-any.whl (sha256 505bdb0f318731d45f1f712071fc781a8981f6847a31c902c9f5e652d4f67faf)
-    Licence files (inside engine/pkgs.zip): uvicorn-0.54.0.dist-info/
+    Licence files (inside engine/pkgs.bin): uvicorn-0.54.0.dist-info/
 
 ====================================================================================================
 PART 2. LICENCE TEXTS
