@@ -16,8 +16,9 @@ IBAN, numéros et autres données privées par des codes : `DOSSIER_1`, `DOC_3`,
    `shield_search`, `shield_save_draft`, `shield_status`. N'utilisez aucun autre moyen pour lire ces documents.
 
 2. **Ajouter un dossier.** Appelez `shield_protect_folder`. Une fenêtre s'ouvre sur l'ordinateur de l'avocat et il
-   choisit lui-même le dossier du client. Prévenez-le simplement : « Une fenêtre va s'ouvrir : choisissez le
-   dossier du client. » **Ne demandez jamais le nom ni l'emplacement du dossier** : le nom d'un dossier contient
+   choisit lui-même le dossier du client. Prévenez-le simplement : « Une fenêtre RAGbase Shield va s'ouvrir
+   par-dessus Claude dans quelques secondes : cliquez dedans, puis choisissez le dossier du client. »
+   **Ne demandez jamais le nom ni l'emplacement du dossier** : le nom d'un dossier contient
    souvent le nom des parties. La réponse donne un code (`DOSSIER_1`) et des nombres. Pour revenir à un dossier
    déjà protégé, appelez aussi `shield_protect_folder` : il garde son code.
 

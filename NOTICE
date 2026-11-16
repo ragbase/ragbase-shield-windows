@@ -54,6 +54,6 @@ Bundled in this plugin
 -------------------------------------------------------------------------------
 
 This plugin folder bundles RAGbase Shield 0.4.2 (engine source: github.com/ragbase/ragbase-shield,
-branch plugin-claude-tab, commit 5cebe92a0e18aba6d5bddc5ea1bebdf0e28ac9da), the runtime Python 3.14.10 for Windows 64-bit (python.org embeddable package)
+branch plugin-claude-tab, commit f5b3b33cc677016793e7abdcb210dd8e3f1344bb), the runtime Python 3.14.10 for Windows 64-bit (python.org embeddable package)
 and the Python packages it needs (in engine/pkgs.zip). Each bundled component keeps its own licence. The list, the
 sources and the full licence texts are in THIRD_PARTY_LICENSES. No GPL, LGPL or AGPL code is shipped.
