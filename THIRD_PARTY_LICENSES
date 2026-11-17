@@ -1,4 +1,4 @@
-THIRD-PARTY LICENCES: RAGbase Shield plugin for Claude (Windows), version 0.4.3
+THIRD-PARTY LICENCES: RAGbase Shield plugin for Claude (Windows), version 0.4.4
 
 RAGbase Shield itself is under the Apache License 2.0 (files LICENSE and NOTICE).
 This plugin also bundles a Python runtime and the Python packages below. Each one keeps its own licence.

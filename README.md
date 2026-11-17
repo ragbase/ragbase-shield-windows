@@ -18,8 +18,8 @@ Gratuit et open source. Rien d'autre à installer.
 
 Il vous faut l'application Claude pour Windows.
 
-- **Le plus simple :** sur [shield.ragbase.ai](https://shield.ragbase.ai), cliquez sur le bouton pour Windows. L'application Claude s'ouvre : cliquez sur **Synchro**, puis sur **Ajouter** à droite de « RAGbase Shield (Windows) ». Si votre Claude est en anglais, ces boutons s'appellent **Sync** et **Add**.
-- **Autre façon :** dans l'application Claude, ouvrez **Personnalisation > Plug-ins > Ajouter > Ajouter une marketplace > Ajouter depuis un dépôt**. Écrivez `ragbase/ragbase-shield-windows` et cliquez sur **Synchro**. Dans l'onglet **Découvrir**, cliquez ensuite sur **Ajouter** à droite de « RAGbase Shield (Windows) ». Si votre Claude est en anglais : **Customize > Plugins > Add > Add marketplace > Add from a repository**, puis **Sync**, **Discover** et **Add**.
+- **Le plus simple :** sur [shield.ragbase.ai](https://shield.ragbase.ai), cliquez sur le bouton pour Windows. L'application Claude s'ouvre : cliquez sur **Synchro**, puis sur **Ajouter** à droite de « RAGbase Shield (Windows) », puis sur **Continuer** dans la fenêtre qui s'ouvre (Claude vous prévient que Shield est un programme qui tourne sur votre ordinateur : c'est normal). Si votre Claude est en anglais, ces boutons s'appellent **Sync**, **Add** et **Continue**.
+- **Autre façon :** dans l'application Claude, ouvrez **Personnalisation > Plug-ins > Ajouter > Ajouter une marketplace > Ajouter depuis un dépôt**. Écrivez `ragbase/ragbase-shield-windows` et cliquez sur **Synchro**. Dans l'onglet **Découvrir**, cliquez ensuite sur **Ajouter** à droite de « RAGbase Shield (Windows) », puis sur **Continuer**. Si votre Claude est en anglais : **Customize > Plugins > Add > Add marketplace > Add from a repository**, puis **Sync**, **Discover** et **Add**.
 
 ### Utiliser Shield en 3 étapes
 
@@ -63,8 +63,8 @@ Free and open source. Nothing else to install.
 
 You need the Claude app for Windows.
 
-- **Easiest:** on [shield.ragbase.ai](https://shield.ragbase.ai), click the button for Windows. The Claude app opens: click **Sync**, then **Add** next to "RAGbase Shield (Windows)".
-- **Other way:** in the Claude app, open **Customize > Plugins > Add > Add marketplace > Add from a repository**. Type `ragbase/ragbase-shield-windows` and click **Sync**. Then, in the **Discover** tab, click **Add** next to "RAGbase Shield (Windows)".
+- **Easiest:** on [shield.ragbase.ai](https://shield.ragbase.ai), click the button for Windows. The Claude app opens: click **Sync**, then **Add** next to "RAGbase Shield (Windows)", then **Continue** in the window that opens (Claude tells you that Shield is a program that runs on your computer: this is normal).
+- **Other way:** in the Claude app, open **Customize > Plugins > Add > Add marketplace > Add from a repository**. Type `ragbase/ragbase-shield-windows` and click **Sync**. Then, in the **Discover** tab, click **Add** next to "RAGbase Shield (Windows)", then **Continue**.
 
 ### Use Shield in 3 steps
 
@@ -96,8 +96,8 @@ Your client folders and the documents in "Shield - sorties" stay where they are.
 
 ## Technical details
 
-- **Engine source:** [github.com/ragbase/ragbase-shield](https://github.com/ragbase/ragbase-shield), branch `plugin-claude-tab`, commit `fcde0ac5f4fae092d4392b2651ac56bedab3cfc3`. The plugin runs the module `ragbase_shield.claude_tab` (RAGbase Shield 0.4.3): seven MCP tools in French, detection rules only (no model).
-- **Start:** `.mcp.json` runs `${CLAUDE_PLUGIN_ROOT}/engine/shield.exe` (the python.org `pythonw.exe`, renamed: no console window) with `-I -B -X utf8 -m shield_boot`. The start module `shield_boot` (standard library only; compiled in `engine/shield_boot.pyc`, source in `engine/boot-src/shield_boot.py`) unpacks `engine/pkgs.bin` (a zip archive) once into `%LOCALAPPDATA%\RAGbase Shield\engine\0.4.3-<id>` (folder from the system, `<id>` = the first 12 hex characters of the archive's SHA-256, in `engine/pkgs.id`), then runs `ragbase_shield.claude_tab`. Why: the Claude app puts the plugin about 180 to 230 characters deep, and Windows cannot open a path of 260 characters or more by default; every file of the plugin folder has a relative path of 32 characters or less. Each file is written under a temporary name, then renamed; a start that is stopped goes on at the next start; the cache folder can be deleted at any time.
+- **Engine source:** [github.com/ragbase/ragbase-shield](https://github.com/ragbase/ragbase-shield), branch `plugin-claude-tab`, commit `e559045cf304794fa1bb4e68c92a6b9b5bfc70ed`. The plugin runs the module `ragbase_shield.claude_tab` (RAGbase Shield 0.4.4): seven MCP tools in French, detection rules only (no model).
+- **Start:** `.mcp.json` runs `${CLAUDE_PLUGIN_ROOT}/engine/shield.exe` (the python.org `pythonw.exe`, renamed: no console window) with `-I -B -X utf8 -m shield_boot`. The start module `shield_boot` (standard library only; compiled in `engine/shield_boot.pyc`, source in `engine/boot-src/shield_boot.py`) unpacks `engine/pkgs.bin` (a zip archive) once into `%LOCALAPPDATA%\RAGbase Shield\engine\0.4.4-<id>` (folder from the system, `<id>` = the first 12 hex characters of the archive's SHA-256, in `engine/pkgs.id`), then runs `ragbase_shield.claude_tab`. Why: the Claude app puts the plugin about 180 to 230 characters deep, and Windows cannot open a path of 260 characters or more by default; every file of the plugin folder has a relative path of 32 characters or less. Each file is written under a temporary name, then renamed; a start that is stopped goes on at the next start; the cache folder can be deleted at any time.
 - **Runtime:** Python 3.14.10 for Windows 64-bit, the python.org embeddable package (PSF-2.0), in `engine/`. The standard library is in `engine/python314.bin` (the python.org archive of compiled files, a zip archive under a name that the Claude app accepts; named in `engine/python314._pth`); the packages are in `engine/pkgs.bin`.
 - **Data folder:** the vault and the list of dossiers are in `%USERPROFILE%\RAGbase Shield` (profile folder from the system, `FOLDERID_Profile`), not under `AppData`: the packaged Claude app can redirect what its programs write under `AppData` to a folder that Windows deletes with the app.
 - **No network:** nothing is downloaded at install or at run time, and the engine opens no network connection. The Mac build is tested with every network access denied by the system.

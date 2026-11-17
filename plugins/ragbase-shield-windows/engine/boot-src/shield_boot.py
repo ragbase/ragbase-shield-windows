@@ -27,7 +27,7 @@ start builds it again. The vault (names and codes) is NOT here: see ``ragbase_sh
 import os
 import sys
 
-VERSION = "0.4.3"
+VERSION = "0.4.4"
 APP_DIR_NAME = "RAGbase Shield"
 ARCHIVE = "pkgs.bin"  # a zip archive, under a name that the Claude app accepts
 ID_FILE = "pkgs.id"
